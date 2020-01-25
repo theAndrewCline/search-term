@@ -6,7 +6,7 @@ const rootReducter = combineReducers({
   search
 })
 
-export const initStore = (): Store  => createStore(
+export const initStore = (): Store => createStore(
   rootReducter,
   composeWithDevTools()
 )

@@ -1,4 +1,4 @@
-import { ActionCreator } from "redux";
+import { ActionCreator } from 'redux'
 
 export type SearchState = {
   items: any[]
@@ -21,10 +21,10 @@ const initialState: SearchState = {
 
 export const search = (state: SearchState = initialState, action: SearchAction<any>): SearchState => {
   switch (action.type) {
-    case actions.UpdateSearch : 
+    case actions.UpdateSearch :
       return { ...state, searchTerm: action.payload }
-    default : 
-        return state
+    default :
+      return state
   }
 }
 

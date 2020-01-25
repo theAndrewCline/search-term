@@ -1,10 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
 
 import { connect } from 'react-redux'
-import { Dispatch } from 'redux';
-import { updateSearchTerm, SearchState } from './redux/search';
+import { Dispatch } from 'redux'
+import { updateSearchTerm, SearchState } from './redux/search'
 
 const App: React.FC<{searchTerm: string, updateTerm: (term: string) => void}> = ({ searchTerm, updateTerm }) => {
   return (
@@ -26,7 +26,7 @@ const App: React.FC<{searchTerm: string, updateTerm: (term: string) => void}> = 
       </header>
 
     </div>
-  );
+  )
 }
 
 const dispatchToProps = (dispatch: Dispatch) => {
@@ -39,4 +39,4 @@ const stateToProps = (state: SearchState) => ({
   searchTerm: state.searchTerm
 })
 
-export default connect(stateToProps, dispatchToProps)(App);
+export default connect(stateToProps, dispatchToProps)(App)
